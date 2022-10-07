@@ -104,6 +104,7 @@ public class Player : MonoBehaviour
     {
         if (!isInCooldown)
         {
+            StartCoroutine(cooldown());
             if (life > 0)
             {
                 lifesPanel.transform.GetChild(life).gameObject.SetActive(false);
@@ -111,19 +112,17 @@ public class Player : MonoBehaviour
                 if (enemy)
                 {
                     Vector2 difference =
-                        (transform.position - enemy.transform.position)
-                            .normalized;
-                    Vector2 force = difference * knockback;
-                    rigidBody2D
-                        .AddForce(force * knockback, ForceMode2D.Impulse);
-                }
-            }
+                        (transform.position - enemy.transform.position);
+                    float knockbackDirection = difference.x >= 0 ? 1 : -1;
+                    rigidBody2D.velocity = new Vector2(knockbackDirection * knockback, knockback / 2);
+                }//FIN IF
+            }//FIN IF
             else
             {
                 Death();
-            }
-        }
-    }
+            }//FIN ELSE
+        }//FIN IF
+    }//FIN HIT
 
     IEnumerator cooldown()
     {
@@ -162,8 +161,11 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rigidBody2D.velocity = new Vector2(horizontal, rigidBody2D.velocity.y);
-    }
+        if (!isInCooldown)
+        {
+            rigidBody2D.velocity = new Vector2(horizontal, rigidBody2D.velocity.y);
+        }//FIN IF
+    }//FIN FIXEDUPDATE
 
     private void OnTriggerEnter2D(Collider2D collider)
     {

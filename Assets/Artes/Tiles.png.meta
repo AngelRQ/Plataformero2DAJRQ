@@ -821,7 +821,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles_33
+      name: Bullet
       rect:
         serializedVersion: 2
         x: 136
@@ -5176,7 +5176,7 @@ TextureImporter:
         width: 9
         height: 10
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6428,7 +6428,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles_346
+      name: Warp
       rect:
         serializedVersion: 2
         x: 72
@@ -27541,7 +27541,7 @@ TextureImporter:
         width: 11
         height: 10
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -27647,7 +27647,7 @@ TextureImporter:
       Tiles_259: 1959278154
       Tiles_808: -1112569887
       Tiles_468: -957783880
-      Tiles_346: 828935888
+      Tiles_1150: -1078630178
       Tiles_242: -970044183
       Tiles_64: 621695747
       Tiles_238: -1819232142
@@ -27656,7 +27656,6 @@ TextureImporter:
       Tiles_189: 1316935875
       Tiles_1209: -184052359
       Tiles_344: 875065119
-      Tiles_1150: -1078630178
       Tiles_1160: -1181723628
       Tiles_458: -634191015
       Tiles_782: 423040882
@@ -27963,6 +27962,7 @@ TextureImporter:
       Tiles_1314: -268344587
       Tiles_640: -2066999963
       Tiles_760: 298921429
+      Bullet: -440579874
       Tiles_1299: -1188961688
       Tiles_1240: 212430512
       Tiles_293: 861593077
@@ -28072,18 +28072,17 @@ TextureImporter:
       Tiles_1127: -796195719
       Tiles_517: 1323911760
       Tiles_1014: 1661683403
-      Tiles_33: -440579874
       Tiles_881: 257035850
+      Tiles_1135: 872425271
       Tiles_821: -1338518211
       Tiles_638: -1823403013
       Tiles_172: -710800421
       Tiles_581: 1374098951
       Tiles_1121: -283969999
       Tiles_838: 324794484
-      Tiles_1135: 872425271
+      Tiles_1259: -612236227
       Tiles_984: -1510501159
       Tiles_575: -327822217
-      Tiles_1259: -612236227
       Tiles_1152: -384156185
       Tiles_920: -143969786
       Tiles_766: 1569202132
@@ -28817,6 +28816,7 @@ TextureImporter:
       Tiles_891: 630867848
       Tiles_1313: 1081879381
       Tiles_1192: 1909678615
+      Warp: 828935888
       Tiles_759: 506051884
       Tiles_1276: 1323039609
       Tiles_112: -1758484991

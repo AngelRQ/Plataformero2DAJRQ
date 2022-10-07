@@ -1234,6 +1234,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1792398920542802448, guid: 9ed8757ef09f6784b9464081299b3f41, type: 3}
+      propertyPath: knockback
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 1792398920542802449, guid: 9ed8757ef09f6784b9464081299b3f41, type: 3}
       propertyPath: m_LocalPosition.y
       value: 1.13
@@ -1318,6 +1322,10 @@ PrefabInstance:
     - target: {fileID: 1792398920542802448, guid: 9ed8757ef09f6784b9464081299b3f41, type: 3}
       propertyPath: speed
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1792398920542802448, guid: 9ed8757ef09f6784b9464081299b3f41, type: 3}
+      propertyPath: knockback
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1792398920542802449, guid: 9ed8757ef09f6784b9464081299b3f41, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2947,6 +2955,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 1792398920542802448, guid: 9ed8757ef09f6784b9464081299b3f41, type: 3}
+      propertyPath: knockback
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 1792398920542802449, guid: 9ed8757ef09f6784b9464081299b3f41, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.43
@@ -3326,7 +3338,7 @@ MonoBehaviour:
   speed: 15
   jumpForce: 300
   bulletPrefab: {fileID: 5109373484712342799, guid: 491649283c08c8246a138423253eacbc, type: 3}
-  lifesPanel: {fileID: 0}
+  lifesPanel: {fileID: 45189173}
   respawnpoint: {x: 0, y: 0}
   horizontal: 0
   cooldownTime: 1
