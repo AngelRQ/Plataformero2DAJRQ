@@ -32,6 +32,7 @@ public class Player : MonoBehaviour
     private Vector2 initialPosition;
 
     private float lastShoot;
+    private GameObject destinyWarp;
 
     // Start is called before the first frame update
     void Start()
@@ -80,6 +81,11 @@ public class Player : MonoBehaviour
             {
                 Shoot();
                 lastShoot = Time.time;
+            }
+
+            if (Input.GetKeyDown(KeyCode.S) && destinyWarp)
+            {
+                transform.position = destinyWarp.transform.position;
             }
 
             DeathOnFall();
@@ -170,10 +176,26 @@ public class Player : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.name == "Tilemap") isGrounded = true;
-    }
+        if (collider.name == "PointA" || collider.name == "PointB")
+        {
+            GameObject warp = collider.transform.parent.gameObject;
+            if (collider.name == "PointA")
+            {
+                destinyWarp = warp.transform.Find("PointB").gameObject;
+            }
+            else
+            {
+                destinyWarp = warp.transform.Find("PointA").gameObject;
+            }
+        }//FIN IF
+    }//FIN ONTRIGGERENTER
 
     private void OnTriggerExit2D(Collider2D collider)
     {
         if (collider.name == "Tilemap") isGrounded = false;
-    }
+        if (collider.name == "PointA" || collider.name == "PointB")
+        {
+            destinyWarp = null;
+        }//FIN IF
+    }//FIN ONTRIGGEREXIT
 }

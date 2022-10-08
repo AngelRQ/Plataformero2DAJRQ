@@ -16,6 +16,7 @@ public class GameController : MonoBehaviour
     private BoxCollider2D playerCollider;
 
     public GameObject[] checkPoints;
+    public bool isFinal;
 
     // Start is called before the first frame update
     void Start()
@@ -28,7 +29,15 @@ public class GameController : MonoBehaviour
     {
         if (winCollider.IsTouching(playerCollider))
         {
-            SceneManager.LoadScene("Level" + (level + 1));
+            if (isFinal)
+            {
+                SceneManager.LoadScene("Win");
+            }
+            else
+            {
+                SceneManager.LoadScene("Level" + (level + 1));
+            }
+
         }
         foreach (var checkpoint in checkPoints)
         {
@@ -40,7 +49,8 @@ public class GameController : MonoBehaviour
                     player.transform.position;
             }
         }
-        if(Input.GetKeyDown(KeyCode.Escape)){
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
             Pause();
         }
     }
