@@ -17,4 +17,4 @@ public class Camera : MonoBehaviour
         position.y = player.transform.position.y;
         transform.position = position;
     }
-}
+}//FIN DE LA CLASE CAMARA
