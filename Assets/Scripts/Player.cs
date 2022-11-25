@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Unity.VisualScripting;
+using UnityEngine.SceneManagement;
 
 //COMENTARIO DE PRUEBA RAMA
 
@@ -100,12 +101,16 @@ public class Player : MonoBehaviour
         respawnpoint = initialPosition;
         if (life <= 0)
         {
+            SceneManager.LoadScene("Perdida");
+
             life = 2;
             for (int i = 0; i < lifesPanel.transform.childCount; i++)
             {
                 lifesPanel.transform.GetChild(i).gameObject.SetActive(true);
             }
         }
+
+
     }
 
     public void Hit(float knockback, GameObject enemy)
